@@ -3,3 +3,7 @@ bower_components
 .tmp
 .vscode
 typings
+app/*.js*
+app/**/*.js*
+server/*.js*
+server/**/*.js*

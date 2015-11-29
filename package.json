@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pramodsankarl/react-express-tsx#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "browser-sync": "^2.10.0",
     "browserify": "^12.0.1",
     "ejs": "^2.3.4",

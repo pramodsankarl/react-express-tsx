@@ -27,6 +27,7 @@ gulp.task('compile', function(){
 
 gulp.task('watch-ts', ['compile'], function() {
     gulp.watch('app/**/*.ts*', ['compile']); //, 'server/**/*.ts'
+	gulp.watch('server/**/*.ts', ['compile']);
 });
 
 gulp.task('watch-css', ['copy-css'], function(){
