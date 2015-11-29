@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "jsx": "react"
+    },
+    "exclude": [
+        "node_modules",
+        "bower_components"
+    ]
+}

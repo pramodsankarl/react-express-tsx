@@ -1,0 +1,35 @@
+{
+  "name": "react-express-tsx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pramodsankarl/react-express-tsx.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pramodsankarl/react-express-tsx/issues"
+  },
+  "homepage": "https://github.com/pramodsankarl/react-express-tsx#readme",
+  "dependencies": {
+    "browser-sync": "^2.10.0",
+    "browserify": "^12.0.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "guid": "0.0.12",
+    "gulp": "^3.9.0",
+    "gulp-live-server": "0.0.29",
+    "gulp-replace": "^0.5.4",
+    "gulp-typescript": "^2.9.2",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1"
+  }
+}
