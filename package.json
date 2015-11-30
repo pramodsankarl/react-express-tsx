@@ -27,6 +27,7 @@
     "gulp-live-server": "0.0.29",
     "gulp-replace": "^0.5.4",
     "gulp-typescript": "^2.9.2",
+    "jquery": "^2.1.4",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "reactify": "^1.1.1",

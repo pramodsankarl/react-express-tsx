@@ -1,6 +1,6 @@
-import {IRoute, Express, Application} from 'express';
+import {IRoute, Express, Application, Router} from 'express';
 
-export default function (app:Application){
+export default function (router:Router){
 	var items = [{
 		name:"Ice Cream"
 	},{
@@ -12,6 +12,12 @@ export default function (app:Application){
 		name:"Snarks"
 	}];
 	
-	app.get('/api/items', (req, res)=> res.send(items));
+	router
+		.get('/items', (req, res)=> res.send(items))
+		.post('/items', (req, res)=> {
+			var item = req.body;
+			items.push(item);
+			res.status(200).send(item);
+		});
 }
 

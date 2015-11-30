@@ -9,4 +9,5 @@ function render(items){
 
 groceryItemStore.onChange(render);
 
+
 render(groceryItemStore.getItems());

@@ -1,5 +1,6 @@
 import {dispatcher, IDispatchPayload} from '../dispatcher';
 import {Actions} from '../actions/BaseActions';
+import {restHelper} from  '../helpers/RestHelper';
 
 interface Item{
 	name:string;
@@ -8,22 +9,13 @@ interface Item{
 
 class GroceryItemStore{
 	
-	private items:Array<Item> = [{
-		name:"Ice Cream"
-	},{
-		name:"Waffles"
-	},{
-		name:"Candy",
-		purchased:true
-	},{
-		name:"Snarks"
-	}];
-	
+	private items:Array<Item> = [];
 	private listeners:Array<Function> = [];
 	private dispatcherId:string;
 	
 	constructor(){
 		this.dispatcherId = dispatcher.register(this.handleDispatch.bind(this));
+		this.initialize();
 	}
 	
 	getItems(){
@@ -34,7 +26,15 @@ class GroceryItemStore{
 		this.listeners.push(listener);
 	}
 	
+	private initialize(){
+		restHelper.get("api/items").then((data:Item[])=> {
+			this.items = data;
+			this.triggerListeners();
+		});
+	}
+	
 	private addItem(item:Item){
+		restHelper.post("api/items", item);
 		this.items.push(item);
 		this.triggerListeners();
 	}
