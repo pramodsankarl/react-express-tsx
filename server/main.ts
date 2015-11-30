@@ -2,6 +2,7 @@
 /// <reference path="../typings/express/express.d.ts" />
 import {IRoute, Express, Router} from 'express';
 import items from './routes/items';
+require('./database');
 
 let bodyParser = require('body-parser');
 let express:any = require('express');
