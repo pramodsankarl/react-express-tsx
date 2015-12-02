@@ -1,4 +1,4 @@
-Converting [Play by play by Daniel Stern, a simple react app,](https://github.com/danielstern/react-express-examplar) with Typescript.
+
 
 ##Usage Instructions
 
@@ -8,3 +8,6 @@ Converting [Play by play by Daniel Stern, a simple react app,](https://github.co
  - Install dependencies with `npm install`; `bower install`
  - Install typings with `tsd install` (If this does not work use tsd reinstall)
  - Run app with `gulp serve`
+ - 
+ 
+######[Play by play - Daniel Stern, a simple react app,](https://github.com/danielstern/react-express-examplar) in Typescript, An attempt.
