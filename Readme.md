@@ -1,4 +1,4 @@
-
+### Mongo, Express, React, Node, Typescript
 
 ##Usage Instructions
 
@@ -9,5 +9,4 @@
  - Install typings with `tsd install` (If this does not work use tsd reinstall)
  - Run app with `gulp serve`
  - 
- 
-######[Play by play - Daniel Stern, a simple react app,](https://github.com/danielstern/react-express-examplar) in Typescript, An attempt.
+

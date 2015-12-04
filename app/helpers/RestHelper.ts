@@ -29,6 +29,29 @@ class RestHelper{
 			});
 		});
 	}
+	
+	patch(url:string, data:any){
+		return new Promise(function(success, error){
+			$.ajax({
+				url:url,
+				method:'PATCH',
+				data: data,
+				success:success,
+				error:error
+			});
+		});
+	}
+	
+	del(url:string){
+		return new Promise(function(success, error){
+			$.ajax({
+				url:url,
+				method:'DELETE',
+				success:success,
+				error:error
+			});
+		});
+	}
 }
 let restHelper = new RestHelper;
 
