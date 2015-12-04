@@ -5,9 +5,14 @@ import {restHelper} from  '../helpers/RestHelper';
 interface Item{
 	name:string;
 	purchased?:boolean;
+	_id:any;
 }
 
+
+
 class GroceryItemStore{
+	
+	private APIBASE:string = 'api/items/';
 	
 	private items:Array<Item> = [];
 	private listeners:Array<Function> = [];
@@ -27,14 +32,14 @@ class GroceryItemStore{
 	}
 	
 	private initialize(){
-		restHelper.get("api/items").then((data:Item[])=> {
+		restHelper.get(this.APIBASE).then((data:Item[])=> {
 			this.items = data;
 			this.triggerListeners();
 		});
 	}
 	
 	private addItem(item:Item){
-		restHelper.post("api/items", item);
+		restHelper.post(this.APIBASE, item);
 		this.items.push(item);
 		this.triggerListeners();
 	}
@@ -54,6 +59,8 @@ class GroceryItemStore{
 		}
 		
 		this.triggerListeners();
+		
+		restHelper.patch(this.APIBASE + item._id, item);
 	}
 	
 	private deleteItem(item:Item){
@@ -64,6 +71,7 @@ class GroceryItemStore{
 		}
 		
 		this.triggerListeners();
+		restHelper.del(this.APIBASE + item._id);
 	}
 	
 	private _getItemIndex(item:Item){
