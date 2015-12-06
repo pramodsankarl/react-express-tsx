@@ -5,7 +5,7 @@ import {restHelper} from  '../helpers/RestHelper';
 interface Item{
 	name:string;
 	purchased?:boolean;
-	_id:any;
+	_id?:any;
 }
 
 
@@ -39,7 +39,7 @@ class GroceryItemStore{
 	}
 	
 	private addItem(item:Item){
-		restHelper.post(this.APIBASE, item);
+		restHelper.post(this.APIBASE, item).then(id=> item._id = id );
 		this.items.push(item);
 		this.triggerListeners();
 	}

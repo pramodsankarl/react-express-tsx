@@ -20,7 +20,7 @@ class GroceryItemList extends React.Component<GroceryItemListProps, GroceryItemL
 	render(){
 		return  (
 		<div>
-			<h1> Grocery Listify</h1>
+			<h1>Grocery List</h1>
 			<div>
 				{this.props.items.map((item, idx)=> <GroceryItem item={item} key={"item" + idx}/>)}
 			</div>

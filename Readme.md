@@ -8,5 +8,5 @@
  - Install dependencies with `npm install`; `bower install`
  - Install typings with `tsd install` (If this does not work use tsd reinstall)
  - Run app with `gulp serve`
- - 
+ - Install Mongo and start the server using the command `mongod`
 

@@ -2,7 +2,6 @@
 import {Mongoose, connect, connection} from "mongoose";
 import {GroceryItem, IGroceryItem} from './models/GroceryItems';
 
-
 function conn(){
 	
 	connection.db.dropDatabase();

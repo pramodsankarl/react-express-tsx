@@ -14,12 +14,7 @@ class GroceryListAddItem extends React.Component<GroceryListAddItemProps, Grocer
 	
 	constructor(){
 		super();
-	}
-	
-	getInitialState():GroceryListAddItemState {
-		return {
-			input:""
-		};
+		this.state.input = "";
 	}
 	
 	handleInputName(e:Event){
