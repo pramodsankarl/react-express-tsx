@@ -2,10 +2,12 @@
 /// <reference path="../typings/express/express.d.ts" />
 import {IRoute, Express, Router} from 'express';
 import items from './routes/items';
+import {default as startup} from './appstart';
+
 require('./database');
 
 let bodyParser = require('body-parser');
-let express:any = require('express');
+let express:any = require('express');	
 let app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,8 +17,7 @@ var router:Router = express.Router();
 
 app.use('/api', router);
 
-app.get('/', 
-	(req, res) => res.render('./../app/index.ejs', {}))
+app.get('/', startup)
 	.use((<any>express).static(__dirname + '/../.tmp'))
 	.listen(7777);
 	
